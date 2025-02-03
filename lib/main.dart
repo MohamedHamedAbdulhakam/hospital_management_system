@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hospital_system/features/auth/presetation/views/login_view.dart';
+import 'package:hospital_system/features/home/presentation/views/home_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         textTheme: GoogleFonts.poppinsTextTheme(ThemeData().textTheme),
       ),
-      home: const LoginView(),
+      home: const HomeView(
+        specialist: 'Doctor',
+      ),
     );
   }
 }

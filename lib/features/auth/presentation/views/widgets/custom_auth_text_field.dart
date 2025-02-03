@@ -3,14 +3,16 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/colors.dart';
 import '../../../../../core/utils/styles.dart';
 
-class CustomTextField extends StatelessWidget {
-  const CustomTextField({
+class CustomAuthTextField extends StatelessWidget {
+  const CustomAuthTextField({
     super.key,
-    required this.iconPath,
+    this.iconPath,
     required this.hintText,
+    this.isDate = false,
   });
 
-  final String iconPath;
+  final bool isDate;
+  final String? iconPath;
   final String hintText;
 
   @override
@@ -31,10 +33,15 @@ class CustomTextField extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  iconPath,
-                  fit: BoxFit.fitHeight,
-                ),
+                isDate == true
+                    ? const Icon(
+                        Icons.date_range_outlined,
+                        color: kMainColor,
+                      )
+                    : Image.asset(
+                        iconPath!,
+                        fit: BoxFit.fitHeight,
+                      ),
                 const SizedBox(
                   width: 10,
                 ),
@@ -45,6 +52,12 @@ class CustomTextField extends StatelessWidget {
               ],
             ),
           ),
+          suffixIcon: isDate == true
+              ? const Icon(
+                  Icons.arrow_drop_down_outlined,
+                  color: kDarkGrey,
+                )
+              : null,
           hintText: hintText,
           hintStyle: Styles.regular14.copyWith(color: kLightGrey),
           border: OutlineInputBorder(
