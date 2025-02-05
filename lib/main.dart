@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
+=======
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hospital_system/features/home/presentation/views/home_view.dart';
+>>>>>>> e91ea40b890b3667ba780898d4ecce522eb1cf46
 
 void main() {
   runApp(const MyApp());
@@ -7,6 +12,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+<<<<<<< HEAD
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -120,6 +126,19 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+=======
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        useMaterial3: true,
+        textTheme: GoogleFonts.poppinsTextTheme(ThemeData().textTheme),
+      ),
+      home: const HomeView(
+        specialist: 'Doctor',
+      ),
+>>>>>>> e91ea40b890b3667ba780898d4ecce522eb1cf46
     );
   }
 }
