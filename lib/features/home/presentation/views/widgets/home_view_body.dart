@@ -3,6 +3,7 @@ import 'package:hospital_system/core/utils/colors.dart';
 import 'package:hospital_system/features/home/presentation/views/widgets/custom_home_item1.dart';
 import 'package:hospital_system/features/home/presentation/views/widgets/custom_home_item2.dart';
 import 'package:hospital_system/features/home/presentation/views/widgets/custom_home_item3.dart';
+import 'package:hospital_system/features/reports/presentation/views/reports_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({
@@ -47,11 +48,25 @@ class HomeViewBody extends StatelessWidget {
                       imagePath: item1ImagePath,
                       title: item1Title,
                       color: item1Color,
+                      hasSubTitle: true,
+                      subTitle: 'You have new +1 Request',
                     ),
-                    const CustomHomeItem2(
+                    CustomHomeItem2(
                       imagePath: 'assets/icons/report.png',
                       title: 'Reports',
                       color: kPurple,
+                      hasSubTitle: true,
+                      subTitle: 'You have new +3 Report',
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return const ReportsView();
+                            },
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),
@@ -66,11 +81,14 @@ class HomeViewBody extends StatelessWidget {
                       imagePath: 'assets/icons/task.png',
                       title: 'Tasks',
                       color: kGreen,
+                      hasSubTitle: true,
+                      subTitle: 'You have new +1 Task',
                     ),
                     CustomHomeItem1(
                       imagePath: 'assets/icons/attendance.png',
                       title: 'attendance - leaving',
                       color: kMainColor,
+                      isAttendance: true,
                     ),
                   ],
                 ),

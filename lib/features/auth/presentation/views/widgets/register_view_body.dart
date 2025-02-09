@@ -12,94 +12,97 @@ class RegisterViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SingleChildScrollView(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          CustomAppBar(
-            title: 'New User',
-          ),
-          SizedBox(
-            height: 28,
-          ),
-          CustomAuthTextField(
-            iconPath: 'assets/icons/person.png',
-            hintText: 'First name',
-          ),
-          SizedBox(
-            height: 28,
-          ),
-          CustomAuthTextField(
-            iconPath: 'assets/icons/person.png',
-            hintText: 'Last name',
-          ),
-          SizedBox(
-            height: 28,
-          ),
-          CustomDropdownButtonFormField(
-            iconPath: 'assets/icons/gender.png',
-            hintText: 'Gender',
-            items: ["Male", "Female"],
-          ),
-          SizedBox(
-            height: 28,
-          ),
-          CustomDropdownButtonFormField(
-            iconPath: 'assets/icons/specialist.png',
-            hintText: 'Specialist',
-            items: [
-              "Doctor",
-              "Receptionist",
-              "Nurse",
-              "Analysis Employee",
-              "Manger",
-              "HR",
-            ],
-          ),
-          SizedBox(
-            height: 28,
-          ),
-          CustomAuthTextField(
-            isDate: true,
-            hintText: 'Date of birth',
-          ),
-          SizedBox(
-            height: 28,
-          ),
-          CustomDropdownButtonFormField(
-            iconPath: 'assets/icons/statues.png',
-            hintText: 'Statues',
-            items: [
-              "Single",
-              "Married",
-            ],
-          ),
-          SizedBox(
-            height: 28,
-          ),
-          CustomAuthTextField(
-            iconPath: 'assets/icons/phone.png',
-            hintText: 'Phone Number',
-          ),
-          SizedBox(
-            height: 28,
-          ),
-          CustomAuthTextField(
-            iconPath: 'assets/icons/email.png',
-            hintText: 'E-mail',
-          ),
-          SizedBox(
-            height: 28,
-          ),
-          CustomPasswordTextField(
-            hintText: 'Password',
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          CustomAuthButton(
-            text: 'Login',
-          ),
-        ],
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 24),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            CustomAppBar(
+              title: 'New User',
+            ),
+            SizedBox(
+              height: 28,
+            ),
+            CustomAuthTextField(
+              iconPath: 'assets/icons/person.png',
+              hintText: 'First name',
+            ),
+            SizedBox(
+              height: 28,
+            ),
+            CustomAuthTextField(
+              iconPath: 'assets/icons/person.png',
+              hintText: 'Last name',
+            ),
+            SizedBox(
+              height: 28,
+            ),
+            CustomDropdownButtonFormField(
+              iconPath: 'assets/icons/gender.png',
+              hintText: 'Gender',
+              items: ["Male", "Female"],
+            ),
+            SizedBox(
+              height: 28,
+            ),
+            CustomDropdownButtonFormField(
+              iconPath: 'assets/icons/specialist.png',
+              hintText: 'Specialist',
+              items: [
+                "Doctor",
+                "Receptionist",
+                "Nurse",
+                "Analysis Employee",
+                "Manger",
+                "HR",
+              ],
+            ),
+            SizedBox(
+              height: 28,
+            ),
+            CustomAuthTextField(
+              isDate: true,
+              hintText: 'Date of birth',
+            ),
+            SizedBox(
+              height: 28,
+            ),
+            CustomDropdownButtonFormField(
+              iconPath: 'assets/icons/statues.png',
+              hintText: 'Statues',
+              items: [
+                "Single",
+                "Married",
+              ],
+            ),
+            SizedBox(
+              height: 28,
+            ),
+            CustomAuthTextField(
+              iconPath: 'assets/icons/phone.png',
+              hintText: 'Phone Number',
+            ),
+            SizedBox(
+              height: 28,
+            ),
+            CustomAuthTextField(
+              iconPath: 'assets/icons/email.png',
+              hintText: 'E-mail',
+            ),
+            SizedBox(
+              height: 28,
+            ),
+            CustomPasswordTextField(
+              hintText: 'Password',
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            CustomAuthButton(
+              text: 'Create user',
+            ),
+          ],
+        ),
       ),
     );
   }

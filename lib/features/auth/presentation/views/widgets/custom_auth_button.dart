@@ -9,21 +9,18 @@ class CustomAuthButton extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(25),
-      child: Container(
-        height: 60,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: kMainColor,
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Center(
-          child: Text(
-            text,
-            style: Styles.regular14.copyWith(
-              color: Colors.white,
-            ),
+    return Container(
+      height: 60,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: kMainColor,
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Center(
+        child: Text(
+          text,
+          style: Styles.regular14.copyWith(
+            color: Colors.white,
           ),
         ),
       ),

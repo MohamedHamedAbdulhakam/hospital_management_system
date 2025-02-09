@@ -5,6 +5,10 @@ abstract class Styles {
     fontSize: 14,
     fontWeight: FontWeight.w400,
   );
+  static const regular16 = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+  );
   static const regular12 = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.w300,
@@ -16,6 +20,10 @@ abstract class Styles {
   static const regular19 = TextStyle(
     fontSize: 19,
     fontWeight: FontWeight.w400,
+  );
+  static const medium14 = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
   );
   static const medium20 = TextStyle(
     fontSize: 20,
@@ -39,6 +47,10 @@ abstract class Styles {
   );
   static const light20 = TextStyle(
     fontSize: 20,
+    fontWeight: FontWeight.w300,
+  );
+  static const light10 = TextStyle(
+    fontSize: 10,
     fontWeight: FontWeight.w300,
   );
 }
