@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
+    "name": "hospital_management_system",
+    "short_name": "hospital_management_system",
+=======
     "name": "hospital_system",
     "short_name": "hospital_system",
+>>>>>>> e91ea40b890b3667ba780898d4ecce522eb1cf46
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
