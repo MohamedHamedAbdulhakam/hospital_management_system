@@ -23,20 +23,20 @@ class ReportDetailsViewBody extends StatelessWidget {
           children: [
             Column(
               children: [
-                CustomAppBar(title: 'Report Details'),
-                SizedBox(
+                const CustomAppBar(title: 'Report Details'),
+                const SizedBox(
                   height: 36,
                 ),
-                CustomReportTextFieldBar(),
-                SizedBox(
+                const CustomReportTextFieldBar(),
+                const SizedBox(
                   height: 30,
                 ),
-                CustomReportBody(),
-                SizedBox(
+                const CustomReportBody(),
+                const SizedBox(
                   height: 25,
                 ),
-                CustomReplay(specialist: 'Manager'),
-                SizedBox(
+                const CustomReplay(specialist: 'Manager'),
+                const SizedBox(
                   height: 12,
                 ),
                 Row(
@@ -46,15 +46,15 @@ class ReportDetailsViewBody extends StatelessWidget {
                       height: 280,
                       color: kLightGrey,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Expanded(
                         child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        CustomReportBody(),
-                        SizedBox(
+                        const CustomReportBody(),
+                        const SizedBox(
                           height: 15,
                         ),
                         Container(
@@ -71,8 +71,8 @@ class ReportDetailsViewBody extends StatelessWidget {
                 )
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 16),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 16),
               child: Column(
                 children: [
                   CustomReplayTextField(),

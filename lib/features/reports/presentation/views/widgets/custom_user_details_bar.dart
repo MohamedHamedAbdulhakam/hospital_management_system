@@ -48,9 +48,9 @@ class CustomUserDetailsBar extends StatelessWidget {
             ],
           ),
         ),
-        Expanded(child: SizedBox()),
+        const Expanded(child: SizedBox()),
         Text(
-          '${DateFormat('dd ${DateFormat.ABBR_MONTH} yyyy').format(DateTime.now())}',
+          DateFormat('dd ${DateFormat.ABBR_MONTH} yyyy').format(DateTime.now()),
           style: Styles.light10.copyWith(
             color: kLightGrey,
           ),

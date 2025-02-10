@@ -15,38 +15,41 @@ class CreateReportViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
             children: [
-              CustomAppBar(title: 'Create Report'),
-              SizedBox(
+              const CustomAppBar(title: 'Create Report'),
+              const SizedBox(
                 height: 24,
               ),
-              CustomReportTextField(
+              const CustomReportTextField(
                 hintText: 'Report Name',
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              CustomReportTextField(
+              const CustomReportTextField(
                 hintText: 'Description',
                 maxLines: 4,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               DottedBorder(
                 strokeCap: StrokeCap.butt,
                 color: kLightGrey,
                 strokeWidth: 1, // Border thickness
-                dashPattern: [20, 12], // Dash pattern (dash length, gap length)
+                dashPattern: const [
+                  20,
+                  12
+                ], // Dash pattern (dash length, gap length)
                 borderType:
                     BorderType.RRect, // Border type (Rect, RRect, Circle, Oval)
-                radius: Radius.circular(4),
-                child: Container(
+                radius: const Radius.circular(4),
+                child: SizedBox(
                   height: 230,
                   width: double.infinity,
                   child: Column(
@@ -96,7 +99,7 @@ class CreateReportViewBody extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                                Icon(
+                                const Icon(
                                   Icons.add,
                                   color: kMainColor,
                                 ),
@@ -116,8 +119,8 @@ class CreateReportViewBody extends StatelessWidget {
               )
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16),
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 16),
             child: CustomAuthButton(text: 'Create Report'),
           ),
         ],

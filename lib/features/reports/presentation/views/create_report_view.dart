@@ -15,7 +15,7 @@ class CreateReportView extends StatelessWidget {
         create: (context) => ImagePickerCubit(
           ImagePickerRepository(),
         ),
-        child: CreateReportViewBody(),
+        child: const CreateReportViewBody(),
       ),
     );
   }
