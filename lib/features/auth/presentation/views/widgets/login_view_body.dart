@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_system/features/auth/presentation/views/widgets/custom_auth_button.dart';
+import 'package:hospital_system/features/home/presentation/views/home_view.dart';
 
 import '../../../../../core/utils/colors.dart';
 import '../../../../../core/utils/styles.dart';
@@ -7,8 +8,9 @@ import 'custom_auth_text_field.dart';
 import 'custom_password_text_field.dart';
 
 class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+  const LoginViewBody({super.key, required this.specialist});
 
+  final String specialist;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -60,7 +62,7 @@ class LoginViewBody extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 40,
+                  horizontal: 15,
                   vertical: 8,
                 ),
                 child: Text(
@@ -71,7 +73,17 @@ class LoginViewBody extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 30,
+            ),
             CustomAuthButton(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return HomeView(specialist: specialist);
+                  },
+                ));
+              },
               text: 'Login',
             ),
           ],

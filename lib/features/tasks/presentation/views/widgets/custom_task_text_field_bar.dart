@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:hospital_system/core/utils/styles.dart';
 
 import '../../../../../core/utils/colors.dart';
-import '../../../../../core/utils/styles.dart';
 
-class CustomReplayTextField extends StatelessWidget {
-  const CustomReplayTextField({super.key});
+class CustomTaskTextFieldBar extends StatelessWidget {
+  const CustomTaskTextFieldBar(
+      {super.key, this.maxLines = 1, required this.hintText});
 
+  final int maxLines;
+  final String hintText;
   @override
   Widget build(BuildContext context) {
     return TextField(
+      readOnly: true,
+      maxLines: maxLines,
       decoration: InputDecoration(
         filled: true,
-        contentPadding: const EdgeInsets.only(left: 16),
-        hintText: 'Type your Replay',
-        hintStyle: Styles.regular14.copyWith(
-          color: kLightGrey,
-        ),
-        suffixIcon: Image.asset(
-          'assets/icons/upload.png',
-        ),
+        contentPadding: const EdgeInsets.only(left: 10),
+        hintText: hintText,
+        hintStyle: Styles.medium14,
         border: OutlineInputBorder(
           borderSide: const BorderSide(
             width: 1,

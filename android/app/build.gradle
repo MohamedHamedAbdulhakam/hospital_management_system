@@ -5,10 +5,6 @@ plugins {
     id "dev.flutter.flutter-gradle-plugin"
 }
 
-<<<<<<< HEAD
-android {
-    namespace = "com.example.hospital_management_system"
-=======
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file("local.properties")
 if (localPropertiesFile.exists()) {
@@ -29,7 +25,6 @@ if (flutterVersionName == null) {
 
 android {
     namespace = "com.example.hospital_system"
->>>>>>> e91ea40b890b3667ba780898d4ecce522eb1cf46
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -38,31 +33,15 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-<<<<<<< HEAD
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8
-    }
-
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.hospital_management_system"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
-=======
-    defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.hospital_system"
+        applicationId = "com.hospital_system"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutterVersionCode.toInteger()
         versionName = flutterVersionName
->>>>>>> e91ea40b890b3667ba780898d4ecce522eb1cf46
     }
 
     buildTypes {

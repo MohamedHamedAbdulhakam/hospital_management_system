@@ -4,6 +4,7 @@ import 'package:hospital_system/features/home/presentation/views/widgets/custom_
 import 'package:hospital_system/features/home/presentation/views/widgets/custom_home_item2.dart';
 import 'package:hospital_system/features/home/presentation/views/widgets/custom_home_item3.dart';
 import 'package:hospital_system/features/reports/presentation/views/reports_view.dart';
+import 'package:hospital_system/features/tasks/presentation/views/tasks_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({
@@ -74,7 +75,7 @@ class HomeViewBody extends StatelessWidget {
               const SizedBox(
                 width: 16,
               ),
-              const Expanded(
+              Expanded(
                 child: Column(
                   children: [
                     CustomHomeItem2(
@@ -83,8 +84,20 @@ class HomeViewBody extends StatelessWidget {
                       color: kGreen,
                       hasSubTitle: true,
                       subTitle: 'You have new +1 Task',
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return TasksView(
+                                specialist: specialist,
+                              );
+                            },
+                          ),
+                        );
+                      },
                     ),
-                    CustomHomeItem1(
+                    const CustomHomeItem1(
                       imagePath: 'assets/icons/attendance.png',
                       title: 'attendance - leaving',
                       color: kMainColor,

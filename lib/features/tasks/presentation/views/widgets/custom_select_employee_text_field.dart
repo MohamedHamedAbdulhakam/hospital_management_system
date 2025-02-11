@@ -3,14 +3,10 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/colors.dart';
 import '../../../../../core/utils/styles.dart';
 
-class CustomDropdownButtonFormField extends StatelessWidget {
-  const CustomDropdownButtonFormField(
-      {super.key,
-      required this.iconPath,
-      required this.hintText,
-      required this.items});
+class CustomSelectEmployeeTextField extends StatelessWidget {
+  const CustomSelectEmployeeTextField(
+      {super.key, required this.hintText, required this.items});
 
-  final String iconPath;
   final String hintText;
   final List<String> items;
 
@@ -25,25 +21,6 @@ class CustomDropdownButtonFormField extends StatelessWidget {
       ),
       value: selectedGender,
       decoration: InputDecoration(
-        prefixIcon: SizedBox(
-          width: 50,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                iconPath,
-                fit: BoxFit.fitHeight,
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Image.asset(
-                'assets/icons/cursor.png',
-                fit: BoxFit.fitHeight,
-              ),
-            ],
-          ),
-        ),
         hintText: hintText,
         hintStyle: Styles.regular14.copyWith(color: kLightGrey),
         border: OutlineInputBorder(

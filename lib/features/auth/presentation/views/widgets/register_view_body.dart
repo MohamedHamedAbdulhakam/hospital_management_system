@@ -5,47 +5,48 @@ import 'package:hospital_system/features/auth/presentation/views/widgets/custom_
 
 import '../../../../../core/widgets/custom_app_bar.dart';
 import 'custom_auth_text_field.dart';
+import 'custom_date_drop_down.dart';
 
 class RegisterViewBody extends StatelessWidget {
   const RegisterViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
+    return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24),
+        padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            CustomAppBar(
+            const CustomAppBar(
               title: 'New User',
             ),
-            SizedBox(
+            const SizedBox(
               height: 28,
             ),
-            CustomAuthTextField(
+            const CustomAuthTextField(
               iconPath: 'assets/icons/person.png',
               hintText: 'First name',
             ),
-            SizedBox(
+            const SizedBox(
               height: 28,
             ),
-            CustomAuthTextField(
+            const CustomAuthTextField(
               iconPath: 'assets/icons/person.png',
               hintText: 'Last name',
             ),
-            SizedBox(
+            const SizedBox(
               height: 28,
             ),
-            CustomDropdownButtonFormField(
+            const CustomDropdownButtonFormField(
               iconPath: 'assets/icons/gender.png',
               hintText: 'Gender',
               items: ["Male", "Female"],
             ),
-            SizedBox(
+            const SizedBox(
               height: 28,
             ),
-            CustomDropdownButtonFormField(
+            const CustomDropdownButtonFormField(
               iconPath: 'assets/icons/specialist.png',
               hintText: 'Specialist',
               items: [
@@ -57,17 +58,17 @@ class RegisterViewBody extends StatelessWidget {
                 "HR",
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 28,
             ),
-            CustomAuthTextField(
-              isDate: true,
+            const CustomDateDropDown(
+              iconPath: 'assets/icons/calendar.png',
               hintText: 'Date of birth',
             ),
-            SizedBox(
+            const SizedBox(
               height: 28,
             ),
-            CustomDropdownButtonFormField(
+            const CustomDropdownButtonFormField(
               iconPath: 'assets/icons/statues.png',
               hintText: 'Statues',
               items: [
@@ -75,31 +76,32 @@ class RegisterViewBody extends StatelessWidget {
                 "Married",
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 28,
             ),
-            CustomAuthTextField(
+            const CustomAuthTextField(
               iconPath: 'assets/icons/phone.png',
               hintText: 'Phone Number',
             ),
-            SizedBox(
+            const SizedBox(
               height: 28,
             ),
-            CustomAuthTextField(
+            const CustomAuthTextField(
               iconPath: 'assets/icons/email.png',
               hintText: 'E-mail',
             ),
-            SizedBox(
+            const SizedBox(
               height: 28,
             ),
-            CustomPasswordTextField(
+            const CustomPasswordTextField(
               hintText: 'Password',
             ),
-            SizedBox(
-              height: 20,
+            const SizedBox(
+              height: 45,
             ),
             CustomAuthButton(
               text: 'Create user',
+              onTap: () {},
             ),
           ],
         ),

@@ -9,6 +9,7 @@ class CustomReplayTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      readOnly: true,
       decoration: InputDecoration(
         filled: true,
         contentPadding: const EdgeInsets.only(left: 16),
