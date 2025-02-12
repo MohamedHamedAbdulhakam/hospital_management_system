@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # hospital_management_system
+=======
+# hospital_system
+>>>>>>> e91ea40b890b3667ba780898d4ecce522eb1cf46
 
 A new Flutter project.
 
