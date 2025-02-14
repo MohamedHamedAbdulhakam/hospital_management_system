@@ -221,7 +221,10 @@ class CreateTaskViewBody extends StatelessWidget {
                           ],
                         ),
                       ),
-                    )
+                    ),
+                    SizedBox(
+                      height: height * 0.15,
+                    ),
                   ],
                 ),
               ),
