@@ -14,9 +14,11 @@ class HomeViewBody extends StatelessWidget {
     required this.item1ImagePath,
     required this.item1Title,
     required this.item1Color,
+    this.item1OnTap,
     this.item5ImagePath,
     this.item5Title,
     this.item5Color,
+    this.item5OnTap,
   });
 
   final String specialist;
@@ -25,9 +27,12 @@ class HomeViewBody extends StatelessWidget {
   final String item1ImagePath;
   final String item1Title;
   final Color item1Color;
+  final Function()? item1OnTap;
+
   final String? item5ImagePath;
   final String? item5Title;
   final Color? item5Color;
+  final Function()? item5OnTap;
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +54,7 @@ class HomeViewBody extends StatelessWidget {
                       imagePath: item1ImagePath,
                       title: item1Title,
                       color: item1Color,
+                      onTap: item1OnTap,
                       hasSubTitle: true,
                       subTitle: 'You have new +1 Request',
                     ),
@@ -113,6 +119,7 @@ class HomeViewBody extends StatelessWidget {
                   imagePath: item5ImagePath!,
                   title: item5Title!,
                   color: item5Color!,
+                  onTap: item5OnTap,
                 )
               : const SizedBox(),
         ],
