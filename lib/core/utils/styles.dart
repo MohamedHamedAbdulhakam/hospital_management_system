@@ -53,4 +53,8 @@ abstract class Styles {
     fontSize: 10,
     fontWeight: FontWeight.w300,
   );
+  static const light14 = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w300,
+  );
 }
