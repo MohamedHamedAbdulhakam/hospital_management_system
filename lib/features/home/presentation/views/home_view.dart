@@ -3,6 +3,7 @@ import 'package:hospital_system/features/cases/presentation/views/cases_view.dar
 import 'package:hospital_system/features/employee/presentation/views/employee_view.dart';
 import 'package:hospital_system/features/home/presentation/views/widgets/custom_home_app_bar.dart';
 import 'package:hospital_system/features/home/presentation/views/widgets/home_view_body.dart';
+import 'package:hospital_system/features/notifications/presentation/views/profile_view.dart';
 
 import '../../../../core/utils/colors.dart';
 
@@ -16,10 +17,23 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          CustomHomeAppBar(
-            profileImagePath: 'assets/images/human.png',
-            specialist: specialist,
-            name: 'Mahmoud Ahmed',
+          GestureDetector(
+            onTap: (){
+                Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ProfileScreen(
+                            
+                          );
+                        },
+                ));
+            },
+            child: CustomHomeAppBar(
+              profileImagePath: 'assets/images/human.png',
+              specialist: specialist,
+              name: 'Mahmoud Ahmed',
+            ),
           ),
           specialist == 'Doctor'
               ? HomeViewBody(
