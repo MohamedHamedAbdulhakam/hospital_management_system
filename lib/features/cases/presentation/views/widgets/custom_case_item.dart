@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_system/core/utils/styles.dart';
+import 'package:hospital_system/features/cases/presentation/views/case_details_view.dart';
 
 import '../../../../../core/utils/colors.dart';
 
@@ -107,9 +108,17 @@ class CustomCaseItem extends StatelessWidget {
                       color: kGreen,
                     ),
                     child: Center(
-                      child: Text(
-                        'Show Details',
-                        style: Styles.regular14.copyWith(color: Colors.white),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => CaseDetailsScreen()),
+                          );
+                        },
+                        child: Text(
+                          'Show Details',
+                          style: Styles.regular14.copyWith(color: Colors.white),
+                        ),
                       ),
                     ),
                   ),
