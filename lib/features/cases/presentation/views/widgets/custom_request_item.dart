@@ -118,8 +118,7 @@ class CustomRequestItem extends StatelessWidget {
               Align(
                 alignment: Alignment.center,
                 child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 64, vertical: 16),
+                  padding: const EdgeInsets.symmetric(vertical: 16),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.max,
