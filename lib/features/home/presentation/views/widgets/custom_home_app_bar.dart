@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_system/core/utils/colors.dart';
 import 'package:hospital_system/core/utils/styles.dart';
+import 'package:hospital_system/features/notifications/presentation/views/notifications_views.dart';
 
 class CustomHomeAppBar extends StatelessWidget {
-  const CustomHomeAppBar(
-      {super.key,
-      required this.profileImagePath,
-      required this.specialist,
-      required this.name});
+  const CustomHomeAppBar({
+    super.key,
+    required this.profileImagePath,
+    required this.specialist,
+    required this.name,
+  });
 
   final String profileImagePath;
   final String specialist;
@@ -21,6 +23,7 @@ class CustomHomeAppBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            // Profile Image
             Container(
               width: 37,
               height: 37,
@@ -32,6 +35,8 @@ class CustomHomeAppBar extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
+
+            // Name and Specialist
             Padding(
               padding: const EdgeInsets.all(12),
               child: Column(
@@ -42,7 +47,7 @@ class CustomHomeAppBar extends StatelessWidget {
                     style: Styles.regular14,
                   ),
                   Text(
-                    'Specialist , $specialist',
+                    'Specialist, $specialist',
                     style: Styles.regular10.copyWith(
                       color: kMainColor,
                     ),
@@ -50,10 +55,19 @@ class CustomHomeAppBar extends StatelessWidget {
                 ],
               ),
             ),
-            Expanded(child: SizedBox()),
-            Image.asset(
-              'assets/images/notification.png',
-              fit: BoxFit.cover,
+
+            // Notification Icon Button
+            IconButton(
+              icon: Image.asset(
+                'assets/images/notification.png',
+                fit: BoxFit.cover,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NotificationScreen()),
+                );
+              },
             ),
           ],
         ),
