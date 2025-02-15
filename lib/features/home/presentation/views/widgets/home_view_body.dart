@@ -58,6 +58,8 @@ class HomeViewBody extends StatelessWidget {
                       onTap: item1OnTap,
                       hasSubTitle: true,
                       subTitle: 'You have new +1 Request',
+                      
+                      
                     ),
                     CustomHomeItem2(
                       imagePath: 'assets/icons/report.png',
