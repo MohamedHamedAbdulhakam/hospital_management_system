@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_system/core/utils/colors.dart';
+import 'package:hospital_system/features/attendence/presentation/views/attendence_view.dart';
 import 'package:hospital_system/features/home/presentation/views/widgets/custom_home_item1.dart';
 import 'package:hospital_system/features/home/presentation/views/widgets/custom_home_item2.dart';
 import 'package:hospital_system/features/home/presentation/views/widgets/custom_home_item3.dart';
@@ -103,11 +104,23 @@ class HomeViewBody extends StatelessWidget {
                         );
                       },
                     ),
-                    const CustomHomeItem1(
+                     CustomHomeItem1(
                       imagePath: 'assets/icons/attendance.png',
                       title: 'attendance - leaving',
                       color: kMainColor,
                       isAttendance: true,
+                      onTap:  () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return AttendanceScreen(
+                                
+                              );
+                            },
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),
